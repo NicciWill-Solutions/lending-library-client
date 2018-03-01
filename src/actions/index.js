@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../config';
+import { REACT_APP_API_BASE_URL } from '../config';
 
 export const FETCH_BOOKS_REQUEST = 'FETCH_BOOKS_REQUEST';
 export const fetchBooksRequest = () => ({
@@ -23,7 +23,7 @@ export const fetchBooksError = err => ({
 
 export const fetchBooks = () => dispatch => {
   dispatch(fetchBooksRequest());
-  fetch(`${API_BASE_URL}/books`)
+  fetch(`${REACT_APP_API_BASE_URL}/books`)
   .then(res => {
     if(!res.ok) {
       console.log('There was an error with your request.');
