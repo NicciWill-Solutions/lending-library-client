@@ -11,7 +11,7 @@ const initialState = {
   error: null
 }
 
-export default function getBooks(state=initialState, action) {
+export const booksReducer = (state=initialState, action) => {  //watch this
   if(action.type === actions.FETCH_BOOKS_REQUEST) {
     return Object.assign({}, state, {
       loading: action.loading

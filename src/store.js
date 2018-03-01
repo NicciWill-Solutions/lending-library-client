@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { reducer as formReducer } from 'redux-form';
-import booksReducer from '../src/reducers/booksReducer';
+import { booksReducer } from '../src/reducers/booksReducer';
 
 const rootReducer = combineReducers(
   {
